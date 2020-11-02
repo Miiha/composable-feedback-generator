@@ -3,50 +3,49 @@ import Combine
 import UIKit
 
 extension FeedbackGenerator.Impact {
-  static var live: FeedbackGenerator.Impact {
-    var generator = FeedbackGenerator.Impact()
-    generator.create = { id, style in
-      Effect.run { subscriber in
-        let generator = UIImpactFeedbackGenerator(style: style)
-        dependencies[id] = Dependency(
-          generator: generator,
-          subscriber: subscriber
-        )
-        return AnyCancellable {
+  static var live: Self {
+    Self(
+      create: { id, style in
+        Effect.run { subscriber in
+          let generator = UIImpactFeedbackGenerator(style: style)
+          dependencies[id] = Dependency(
+            generator: generator,
+            subscriber: subscriber
+          )
+          return AnyCancellable {
+            dependencies[id] = nil
+          }
+        }
+      }, destroy: { id in
+        .fireAndForget {
+          dependencies[id]?.subscriber.send(completion: .finished)
           dependencies[id] = nil
         }
-      }
-    }
-    generator.impactOccurred = { id in
-      .fireAndForget {
-        guard let generator = dependencies[id]?.generator as? UIImpactFeedbackGenerator else {
-          return
+      }, impactOccurred: { id in
+        .fireAndForget {
+          guard let generator = dependencies[id]?.generator as? UIImpactFeedbackGenerator else {
+            return
+          }
+          generator.impactOccurred()
         }
-        generator.impactOccurred()
-      }
-    }
-
-    #if os(iOS) || targetEnvironment(macCatalyst)
-    generator.impactOccurredWithIntensity = { id, intensity in
-      .fireAndForget {
-        guard let generator = dependencies[id]?.generator as? UIImpactFeedbackGenerator else {
-          return
+      },
+      impactOccurredWithIntensity: { id, intensity in
+        .fireAndForget {
+          guard let generator = dependencies[id]?.generator as? UIImpactFeedbackGenerator else {
+            return
+          }
+          generator.impactOccurred(intensity: intensity)
         }
-        generator.impactOccurred(intensity: intensity)
-      }
-    }
-    #endif
-
-    generator.prepare = { id in
-      .fireAndForget {
-        guard let generator = dependencies[id]?.generator as? UIImpactFeedbackGenerator else {
-          return
+      },
+      prepare: { id in
+        .fireAndForget {
+          guard let generator = dependencies[id]?.generator as? UIImpactFeedbackGenerator else {
+            return
+          }
+          generator.prepare()
         }
-        generator.prepare()
       }
-    }
-
-    return generator
+    )
   }
 }
 
@@ -63,6 +62,11 @@ extension FeedbackGenerator.Notification {
           return AnyCancellable {
             dependencies[id] = nil
           }
+        }
+      }, destroy: { id in
+        .fireAndForget {
+          dependencies[id]?.subscriber.send(completion: .finished)
+          dependencies[id] = nil
         }
       },
       notificationOccurred: { id, type in
@@ -98,6 +102,11 @@ extension FeedbackGenerator.Selection {
           return AnyCancellable {
             dependencies[id] = nil
           }
+        }
+      }, destroy: { id in
+        .fireAndForget {
+          dependencies[id]?.subscriber.send(completion: .finished)
+          dependencies[id] = nil
         }
       },
       selectionChanged: { id in

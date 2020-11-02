@@ -3,16 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A41D3BA255051AD003AD301 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A41D3B9255051AD003AD301 /* AppState.swift */; };
 		4A56222625501448008CABAE /* FeedbackGeneratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56222525501448008CABAE /* FeedbackGeneratorApp.swift */; };
 		4A56222825501448008CABAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56222725501448008CABAE /* ContentView.swift */; };
 		4A56222A25501449008CABAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A56222925501449008CABAE /* Assets.xcassets */; };
-		4A56222D25501449008CABAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A56222C25501449008CABAE /* Preview Assets.xcassets */; };
 		4A56223825501449008CABAE /* FeedbackGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56223725501449008CABAE /* FeedbackGeneratorTests.swift */; };
-		4A56224325501449008CABAE /* FeedbackGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56224225501449008CABAE /* FeedbackGeneratorUITests.swift */; };
+		4AA86BCA255053310000122F /* ComposableFeedbackGenerator in Frameworks */ = {isa = PBXBuildFile; productRef = 4AA86BC9255053310000122F /* ComposableFeedbackGenerator */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,28 +23,18 @@
 			remoteGlobalIDString = 4A56222125501448008CABAE;
 			remoteInfo = FeedbackGenerator;
 		};
-		4A56223F25501449008CABAE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4A56221A25501448008CABAE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4A56222125501448008CABAE;
-			remoteInfo = FeedbackGenerator;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A41D3B9255051AD003AD301 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		4A56222225501448008CABAE /* FeedbackGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedbackGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A56222525501448008CABAE /* FeedbackGeneratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackGeneratorApp.swift; sourceTree = "<group>"; };
 		4A56222725501448008CABAE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4A56222925501449008CABAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4A56222C25501449008CABAE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4A56222E25501449008CABAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A56223325501449008CABAE /* FeedbackGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeedbackGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A56223725501449008CABAE /* FeedbackGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackGeneratorTests.swift; sourceTree = "<group>"; };
 		4A56223925501449008CABAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4A56223E25501449008CABAE /* FeedbackGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeedbackGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A56224225501449008CABAE /* FeedbackGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackGeneratorUITests.swift; sourceTree = "<group>"; };
-		4A56224425501449008CABAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,17 +42,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AA86BCA255053310000122F /* ComposableFeedbackGenerator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4A56223025501449008CABAE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4A56223B25501449008CABAE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -77,8 +61,8 @@
 			children = (
 				4A56222425501448008CABAE /* FeedbackGenerator */,
 				4A56223625501449008CABAE /* FeedbackGeneratorTests */,
-				4A56224125501449008CABAE /* FeedbackGeneratorUITests */,
 				4A56222325501448008CABAE /* Products */,
+				4AA86BC8255053310000122F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,7 +71,6 @@
 			children = (
 				4A56222225501448008CABAE /* FeedbackGenerator.app */,
 				4A56223325501449008CABAE /* FeedbackGeneratorTests.xctest */,
-				4A56223E25501449008CABAE /* FeedbackGeneratorUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,21 +78,13 @@
 		4A56222425501448008CABAE /* FeedbackGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				4A41D3B9255051AD003AD301 /* AppState.swift */,
 				4A56222525501448008CABAE /* FeedbackGeneratorApp.swift */,
 				4A56222725501448008CABAE /* ContentView.swift */,
 				4A56222925501449008CABAE /* Assets.xcassets */,
 				4A56222E25501449008CABAE /* Info.plist */,
-				4A56222B25501449008CABAE /* Preview Content */,
 			);
 			path = FeedbackGenerator;
-			sourceTree = "<group>";
-		};
-		4A56222B25501449008CABAE /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				4A56222C25501449008CABAE /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		4A56223625501449008CABAE /* FeedbackGeneratorTests */ = {
@@ -121,13 +96,11 @@
 			path = FeedbackGeneratorTests;
 			sourceTree = "<group>";
 		};
-		4A56224125501449008CABAE /* FeedbackGeneratorUITests */ = {
+		4AA86BC8255053310000122F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4A56224225501449008CABAE /* FeedbackGeneratorUITests.swift */,
-				4A56224425501449008CABAE /* Info.plist */,
 			);
-			path = FeedbackGeneratorUITests;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +119,9 @@
 			dependencies = (
 			);
 			name = FeedbackGenerator;
+			packageProductDependencies = (
+				4AA86BC9255053310000122F /* ComposableFeedbackGenerator */,
+			);
 			productName = FeedbackGenerator;
 			productReference = 4A56222225501448008CABAE /* FeedbackGenerator.app */;
 			productType = "com.apple.product-type.application";
@@ -168,24 +144,6 @@
 			productReference = 4A56223325501449008CABAE /* FeedbackGeneratorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		4A56223D25501449008CABAE /* FeedbackGeneratorUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4A56224D25501449008CABAE /* Build configuration list for PBXNativeTarget "FeedbackGeneratorUITests" */;
-			buildPhases = (
-				4A56223A25501449008CABAE /* Sources */,
-				4A56223B25501449008CABAE /* Frameworks */,
-				4A56223C25501449008CABAE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4A56224025501449008CABAE /* PBXTargetDependency */,
-			);
-			name = FeedbackGeneratorUITests;
-			productName = FeedbackGeneratorUITests;
-			productReference = 4A56223E25501449008CABAE /* FeedbackGeneratorUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -199,10 +157,6 @@
 						CreatedOnToolsVersion = 12.0;
 					};
 					4A56223225501449008CABAE = {
-						CreatedOnToolsVersion = 12.0;
-						TestTargetID = 4A56222125501448008CABAE;
-					};
-					4A56223D25501449008CABAE = {
 						CreatedOnToolsVersion = 12.0;
 						TestTargetID = 4A56222125501448008CABAE;
 					};
@@ -223,7 +177,6 @@
 			targets = (
 				4A56222125501448008CABAE /* FeedbackGenerator */,
 				4A56223225501449008CABAE /* FeedbackGeneratorTests */,
-				4A56223D25501449008CABAE /* FeedbackGeneratorUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,19 +186,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A56222D25501449008CABAE /* Preview Assets.xcassets in Resources */,
 				4A56222A25501449008CABAE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4A56223125501449008CABAE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4A56223C25501449008CABAE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -259,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A41D3BA255051AD003AD301 /* AppState.swift in Sources */,
 				4A56222825501448008CABAE /* ContentView.swift in Sources */,
 				4A56222625501448008CABAE /* FeedbackGeneratorApp.swift in Sources */,
 			);
@@ -272,14 +218,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4A56223A25501449008CABAE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4A56224325501449008CABAE /* FeedbackGeneratorUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -287,11 +225,6 @@
 			isa = PBXTargetDependency;
 			target = 4A56222125501448008CABAE /* FeedbackGenerator */;
 			targetProxy = 4A56223425501449008CABAE /* PBXContainerItemProxy */;
-		};
-		4A56224025501449008CABAE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4A56222125501448008CABAE /* FeedbackGenerator */;
-			targetProxy = 4A56223F25501449008CABAE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -417,8 +350,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"FeedbackGenerator/Preview Content\"";
+				DEVELOPMENT_TEAM = 8U38KF48V6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = FeedbackGenerator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -428,6 +363,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.miiha.FeedbackGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = KWTeamDevelopment;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -438,8 +374,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"FeedbackGenerator/Preview Content\"";
+				DEVELOPMENT_TEAM = 8U38KF48V6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = FeedbackGenerator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -449,6 +387,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.miiha.FeedbackGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = KWTeamDevelopment;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -496,44 +435,6 @@
 			};
 			name = Release;
 		};
-		4A56224E25501449008CABAE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = FeedbackGeneratorUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.miiha.FeedbackGeneratorUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FeedbackGenerator;
-			};
-			name = Debug;
-		};
-		4A56224F25501449008CABAE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = FeedbackGeneratorUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.miiha.FeedbackGeneratorUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FeedbackGenerator;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -564,16 +465,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4A56224D25501449008CABAE /* Build configuration list for PBXNativeTarget "FeedbackGeneratorUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4A56224E25501449008CABAE /* Debug */,
-				4A56224F25501449008CABAE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4AA86BC9255053310000122F /* ComposableFeedbackGenerator */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ComposableFeedbackGenerator;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4A56221A25501448008CABAE /* Project object */;
 }
