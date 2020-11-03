@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4A41D3BA255051AD003AD301 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A41D3B9255051AD003AD301 /* AppState.swift */; };
-		4A56222625501448008CABAE /* FeedbackGeneratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56222525501448008CABAE /* FeedbackGeneratorApp.swift */; };
-		4A56222825501448008CABAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56222725501448008CABAE /* ContentView.swift */; };
+		4A56222625501448008CABAE /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56222525501448008CABAE /* RootView.swift */; };
+		4A56222825501448008CABAE /* FeedbackGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56222725501448008CABAE /* FeedbackGeneratorView.swift */; };
 		4A56222A25501449008CABAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A56222925501449008CABAE /* Assets.xcassets */; };
-		4A56223825501449008CABAE /* FeedbackGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56223725501449008CABAE /* FeedbackGeneratorTests.swift */; };
+		4A56223825501449008CABAE /* AppStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56223725501449008CABAE /* AppStateTests.swift */; };
 		4AA86BCA255053310000122F /* ComposableFeedbackGenerator in Frameworks */ = {isa = PBXBuildFile; productRef = 4AA86BC9255053310000122F /* ComposableFeedbackGenerator */; };
 /* End PBXBuildFile section */
 
@@ -28,12 +28,12 @@
 /* Begin PBXFileReference section */
 		4A41D3B9255051AD003AD301 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		4A56222225501448008CABAE /* FeedbackGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedbackGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A56222525501448008CABAE /* FeedbackGeneratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackGeneratorApp.swift; sourceTree = "<group>"; };
-		4A56222725501448008CABAE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4A56222525501448008CABAE /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		4A56222725501448008CABAE /* FeedbackGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackGeneratorView.swift; sourceTree = "<group>"; };
 		4A56222925501449008CABAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A56222E25501449008CABAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A56223325501449008CABAE /* FeedbackGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeedbackGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A56223725501449008CABAE /* FeedbackGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackGeneratorTests.swift; sourceTree = "<group>"; };
+		4A56223725501449008CABAE /* AppStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateTests.swift; sourceTree = "<group>"; };
 		4A56223925501449008CABAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,8 +79,8 @@
 			isa = PBXGroup;
 			children = (
 				4A41D3B9255051AD003AD301 /* AppState.swift */,
-				4A56222525501448008CABAE /* FeedbackGeneratorApp.swift */,
-				4A56222725501448008CABAE /* ContentView.swift */,
+				4A56222725501448008CABAE /* FeedbackGeneratorView.swift */,
+				4A56222525501448008CABAE /* RootView.swift */,
 				4A56222925501449008CABAE /* Assets.xcassets */,
 				4A56222E25501449008CABAE /* Info.plist */,
 			);
@@ -90,7 +90,7 @@
 		4A56223625501449008CABAE /* FeedbackGeneratorTests */ = {
 			isa = PBXGroup;
 			children = (
-				4A56223725501449008CABAE /* FeedbackGeneratorTests.swift */,
+				4A56223725501449008CABAE /* AppStateTests.swift */,
 				4A56223925501449008CABAE /* Info.plist */,
 			);
 			path = FeedbackGeneratorTests;
@@ -205,8 +205,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A41D3BA255051AD003AD301 /* AppState.swift in Sources */,
-				4A56222825501448008CABAE /* ContentView.swift in Sources */,
-				4A56222625501448008CABAE /* FeedbackGeneratorApp.swift in Sources */,
+				4A56222825501448008CABAE /* FeedbackGeneratorView.swift in Sources */,
+				4A56222625501448008CABAE /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,7 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A56223825501449008CABAE /* FeedbackGeneratorTests.swift in Sources */,
+				4A56223825501449008CABAE /* AppStateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

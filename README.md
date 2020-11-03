@@ -105,7 +105,7 @@ TestStore(
   ...
 ```
 
-For more information around testability have a look at [FeedbackGeneratorTests.swift](./Examples/FeedbackGenerator/FeedbackGeneratorTests/FeedbackGeneratorTests.swift).
+For more information around testability have a look at [AppStateTests.swift](./Examples/FeedbackGenerator/FeedbackGeneratorTests/AppStateTests.swift).
 
 ## Installation
 

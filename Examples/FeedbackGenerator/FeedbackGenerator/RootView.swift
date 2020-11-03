@@ -9,7 +9,7 @@ import ComposableArchitecture
 import SwiftUI
 
 @main
-struct FeedbackGeneratorApp: App {
+struct RootView: App {
   let store = Store(
     initialState: AppState(),
     reducer: appReducer,
@@ -20,7 +20,7 @@ struct FeedbackGeneratorApp: App {
     WindowGroup {
       NavigationView {
         WithViewStore(self.store) { viewStore in
-          ContentView(store: self.store)
+          FeedbackGeneratorView(store: self.store)
             .onAppear { viewStore.send(.onAppear) }
             .onDisappear { viewStore.send(.onDisappear) }
             .navigationTitle("Feedback Example")

@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  FeedbackGeneratorView.swift
 //  FeedbackGenerator
 //
 //  Created by Michael Kao on 02.11.20.
@@ -8,7 +8,7 @@
 import ComposableArchitecture
 import SwiftUI
 
-struct ContentView: View {
+struct FeedbackGeneratorView: View {
   let store: Store<AppState, AppAction>
 
   var body: some View {
@@ -67,9 +67,9 @@ struct ContentView: View {
   }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct FeedbackGeneratorView_Previews: PreviewProvider {
   static var previews: some View {
-    ContentView(
+    FeedbackGeneratorView(
       store:
         Store(
           initialState: AppState(),
