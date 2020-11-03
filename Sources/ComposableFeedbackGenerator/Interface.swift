@@ -3,9 +3,9 @@ import UIKit
 import Combine
 
 public struct FeedbackGenerator {
-  public let impact: Impact
-  public let notification: Notification
-  public let selection: Selection
+  public var impact: Impact
+  public var notification: Notification
+  public var selection: Selection
 }
 
 extension FeedbackGenerator {

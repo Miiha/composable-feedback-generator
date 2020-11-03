@@ -16,12 +16,14 @@ extension FeedbackGenerator.Impact {
             dependencies[id] = nil
           }
         }
-      }, destroy: { id in
+      },
+      destroy: { id in
         .fireAndForget {
           dependencies[id]?.subscriber.send(completion: .finished)
           dependencies[id] = nil
         }
-      }, impactOccurred: { id in
+      },
+      impactOccurred: { id in
         .fireAndForget {
           guard let generator = dependencies[id]?.generator as? UIImpactFeedbackGenerator else {
             return
@@ -63,7 +65,8 @@ extension FeedbackGenerator.Notification {
             dependencies[id] = nil
           }
         }
-      }, destroy: { id in
+      },
+      destroy: { id in
         .fireAndForget {
           dependencies[id]?.subscriber.send(completion: .finished)
           dependencies[id] = nil
@@ -103,7 +106,8 @@ extension FeedbackGenerator.Selection {
             dependencies[id] = nil
           }
         }
-      }, destroy: { id in
+      },
+      destroy: { id in
         .fireAndForget {
           dependencies[id]?.subscriber.send(completion: .finished)
           dependencies[id] = nil

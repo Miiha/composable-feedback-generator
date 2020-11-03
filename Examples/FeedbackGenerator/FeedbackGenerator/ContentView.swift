@@ -14,13 +14,13 @@ struct ContentView: View {
   var body: some View {
     WithViewStore(self.store) { viewStore in
       Form {
-        Section(header: Text("Input Feedback Generator")) {
-          WithViewStore(self.store.scope(state: { $0.inputStyle }, action: AppAction.inputStylePicked)) { inputViewStore in
+        Section(header: Text("Impact Feedback Generator")) {
+          WithViewStore(self.store.scope(state: { $0.impactStyle }, action: AppAction.impactStylePicked)) { impactViewStore in
             VStack {
               Picker(
-                "Input", selection: inputViewStore.binding(send: { $0 })
+                "Impact", selection: impactViewStore.binding(send: { $0 })
               ) {
-                ForEach(InputStyle.allCases, id: \.self) { style in
+                ForEach(ImpactStyle.allCases, id: \.self) { style in
                   Text(style.rawValue).tag(style)
                 }
               }
@@ -33,10 +33,10 @@ struct ContentView: View {
           }
         }
         Section(header: Text("Notification Feedback Generator")) {
-          WithViewStore(self.store.scope(state: { $0.notificationType }, action: AppAction.notificationTypePicked)) { inputViewStore in
+          WithViewStore(self.store.scope(state: { $0.notificationType }, action: AppAction.notificationTypePicked)) { impactViewStore in
             VStack {
               Picker(
-                "Input", selection: inputViewStore.binding(send: { $0 })
+                "Notification", selection: impactViewStore.binding(send: { $0 })
               ) {
                 ForEach(NotificationType.allCases, id: \.self) { type in
                   Text(type.rawValue).tag(type)
@@ -66,6 +66,7 @@ struct ContentView: View {
     }
   }
 }
+
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
     ContentView(

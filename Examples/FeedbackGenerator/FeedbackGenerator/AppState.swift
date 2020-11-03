@@ -11,7 +11,7 @@ import Foundation
 import UIKit
 
 struct AppState: Equatable {
-  var inputStyle: InputStyle = .medium
+  var impactStyle: ImpactStyle = .medium
   var notificationType: NotificationType = .success
 }
 
@@ -21,7 +21,7 @@ enum AppAction: Equatable {
   case tappedImpactButton
   case tappedNotificationButton
   case tappedSelectionButton
-  case inputStylePicked(InputStyle)
+  case impactStylePicked(ImpactStyle)
   case notificationTypePicked(NotificationType)
 }
 
@@ -37,7 +37,7 @@ let appReducer = Reducer<AppState, AppAction, AppEnvironment> { state, action, e
   switch action {
   case .onAppear:
     return .merge(
-      environment.feedbackGenerator.impact.create(ImpactId(), .init(style: state.inputStyle)).map(absurd),
+      environment.feedbackGenerator.impact.create(ImpactId(), .init(style: state.impactStyle)).map(absurd),
       environment.feedbackGenerator.selection.create(SelectionId()).map(absurd),
       environment.feedbackGenerator.notification.create(NotificationId()).map(absurd)
     )
@@ -61,9 +61,9 @@ let appReducer = Reducer<AppState, AppAction, AppEnvironment> { state, action, e
     let selection = environment.feedbackGenerator.selection
     return selection.selectionChanged(SelectionId()).map(absurd)
 
-  case let .inputStylePicked(style):
-    state.inputStyle = style
-    return environment.feedbackGenerator.impact.create(ImpactId(), .init(style: state.inputStyle))
+  case let .impactStylePicked(style):
+    state.impactStyle = style
+    return environment.feedbackGenerator.impact.create(ImpactId(), .init(style: state.impactStyle))
       .map(absurd)
       .cancellable(id: ImpactId(), cancelInFlight: true)
 
@@ -76,7 +76,7 @@ let appReducer = Reducer<AppState, AppAction, AppEnvironment> { state, action, e
 private func absurd<A>(_ never: Never) -> A {
 }
 
-enum InputStyle: String, CaseIterable, Hashable {
+enum ImpactStyle: String, CaseIterable, Hashable {
   case light = "Light"
   case medium = "Medium"
   case heavy = "Heavy"
@@ -85,7 +85,7 @@ enum InputStyle: String, CaseIterable, Hashable {
 }
 
 extension UIImpactFeedbackGenerator.FeedbackStyle {
-  init(style: InputStyle) {
+  init(style: ImpactStyle) {
     switch style {
     case .light:
       self = .light
